@@ -1,4 +1,5 @@
 const maxCount = 240;
+const rad = 10;
 function countWords(inputValue) {
   const words = inputValue.trim().split(' ');
 
@@ -20,9 +21,12 @@ const characterCounterElement = document.getElementById('character-counter');
 textarea.addEventListener('input', () => {
   wordCounterElement.innerHTML = countWords(textarea.value);
   characterCounterElement.innerHTML = countCharacters(textarea.value);
+  const textarea2 = document.getElementsByTagName('textarea')[0];
+  textarea2.style.height = 'auto'; // Define a altura para automática
+  textarea2.style.height = textarea2.scrollHeight + 'px'; // Ajusta a altura com base no conteúdo
 
   const circle = document.getElementById('inner');
-  const calculate = (2 * 3.141592653589793 * 40) - (((2 * 3.141592653589793 * 40) * countCharacters(textarea.value)) / maxCount)
+  const calculate = (2 * 3.141592653589793 * rad) - (((2 * 3.141592653589793 * rad) * countCharacters(textarea.value)) / maxCount)
   console.log(calculate)
   circle.style.strokeDashoffset = calculate;
 })
