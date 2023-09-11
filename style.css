@@ -16,6 +16,48 @@
   border-top: 1px solid rgba(128, 128, 128, 0.195);
   border-bottom: 1px solid rgba(128, 128, 128, 0.195);
   padding: 10px;
+  position: relative;
+}
+
+.profile {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  left: -50px;
+  top: 20px;
+}
+
+.upper-content {
+  font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 25px;
+  border: 1px solid #cfd9de;
+  padding-left: 12px;
+  padding-right: 5px;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1f9bf0;
+}
+
+.lower-content {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1f9bf0;
+  font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+  margin-block: 10px;
+  gap: 3px;
+}
+
+.lower-content img {
+  width: 16px;
 }
 
 textarea {
@@ -24,14 +66,14 @@ textarea {
   outline: none;
   width: 500px;
   height: auto;
-  min-height: 100px;
+  min-height: 25px;
   border: none;
   font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
 }
 
 textarea::placeholder {
-  font-size: 24px;
+  font-size: 20px;
   color: #546471;
 }
 
@@ -40,7 +82,27 @@ textarea::placeholder {
   border-top: 1px solid rgba(128, 128, 128, 0.195);
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.icons-container {
+  display: flex;
+  align-items: center;
   gap: 10px;
+}
+
+.icons-container img {
+  width: 20px;
+}
+
+.counter-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.counter-button img {
+  width: 30px;
 }
 
 button {
