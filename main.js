@@ -45,10 +45,12 @@ textarea.addEventListener('input', () => {
     innerCircle.style.stroke = '#fcdc58';
     innerCircle.style.strokeDashoffset = calculate;
     numberInsideCircle.innerHTML = maxCount - countCharacters(textarea.value);
+    outerCircle.style.stroke = '#eff3f4';
   } else {
     innerCircle.style.stroke = '#1f9bf0';
     innerCircle.style.strokeDashoffset = calculate;
     numberInsideCircle.innerHTML = "";
+    outerCircle.style.stroke = '#eff3f4';
   }
 
 })
