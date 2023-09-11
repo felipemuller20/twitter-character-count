@@ -1,5 +1,6 @@
 const maxCount = 280;
-const rad = 10;
+const rad = 12;
+
 function countWords(inputValue) {
   const words = inputValue.trim().split(' ');
 
@@ -26,17 +27,28 @@ textarea.addEventListener('input', () => {
   textarea.style.height = 'auto'; // Define a altura para automática
   textarea.style.height = `${textarea.scrollHeight}px`; // Ajusta a altura com base no conteúdo
 
-  const circle = document.getElementById('inner');
+  const innerCircle = document.getElementById('inner');
+  const outerCircle = document.getElementById('outer');
+  const numberInsideCircle = document.getElementById('number-inside-circle');
   const calculate = (2 * Math.PI * rad) - (((2 * Math.PI * rad) * countCharacters(textarea.value)) / maxCount)
 
   if (countCharacters(textarea.value) >= maxCount) {
-    circle.style.stroke = '#f4212e';
-    circle.style.strokeDashoffset = 0;
+    innerCircle.style.stroke = '#f4212e';
+    innerCircle.style.strokeDashoffset = 0;
+    numberInsideCircle.innerHTML = `${(countCharacters(textarea.value) - maxCount) > 0 ? "-" : ""}${countCharacters(textarea.value) - maxCount}`;
+    if (countCharacters(textarea.value) - maxCount > 20) {
+      innerCircle.style.stroke = 'none';
+      outerCircle.style.stroke = 'none';
+    }
+
   } else if ((maxCount - countCharacters(textarea.value)) <= 20) {
-    circle.style.stroke = '#fcdc58';
+    innerCircle.style.stroke = '#fcdc58';
+    innerCircle.style.strokeDashoffset = calculate;
+    numberInsideCircle.innerHTML = maxCount - countCharacters(textarea.value);
   } else {
-    circle.style.stroke = '#1f9bf0';
-    circle.style.strokeDashoffset = calculate;
+    innerCircle.style.stroke = '#1f9bf0';
+    innerCircle.style.strokeDashoffset = calculate;
+    numberInsideCircle.innerHTML = "";
   }
 
 })

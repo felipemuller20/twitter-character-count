@@ -28,10 +28,11 @@
         </section>
         <section class="counter-button">
           <svg>
-            <circle class="outer" cx="50" cy="50" r="10"></circle>
-
-            <circle class="inner" id="inner" cx="50" cy="50" r="10"></circle>
-
+            <circle class="outer" id="outer" cx="50" cy="50" r="12"></circle>
+            <circle class="inner" id="inner" cx="50" cy="50" r="12"></circle>
+            <foreignObject width="30" height="20">
+              <span id="number-inside-circle" xmlns="http://www.w3.org/1999/xhtml"></span>
+            </foreignObject>
           </svg>
           <img src="/add.svg" />
           <button>Post</button>

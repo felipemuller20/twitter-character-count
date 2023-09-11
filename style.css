@@ -123,6 +123,7 @@ svg {
 }
 
 svg circle {
+  transform: rotate(-270deg);
   transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
@@ -133,6 +134,29 @@ svg circle {
 
 svg circle:nth-child(2) {
   stroke: #1f9bf0;
-  stroke-dasharray: calc(2 * 3.141592653589793 * 10);
-  stroke-dashoffset: calc(2 * 3.141592653589793 * 10);
+  stroke-dasharray: calc(2 * 3.141592653589793 * 12);
+  stroke-dashoffset: calc(2 * 3.141592653589793 * 12);
+}
+
+#number-inside-circle {
+  display: inline-block;
+  transform: rotate(-270deg);
+  margin: 0 auto;
+  position: absolute;
+  top: 19.5px;
+  left: 14.5px;
+  width: 22px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 10px;
+  color: #6a7883;
+}
+
+foreignObject {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
