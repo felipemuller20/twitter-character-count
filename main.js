@@ -1,14 +1,6 @@
 const maxCount = 280;
 const rad = 12;
 
-function countWords(inputValue) {
-  const words = inputValue.trim().split(' ');
-
-  const wordCount = words.filter(word => word !== '').length;
-
-  return wordCount;
-}
-
 function countCharacters(inputValue) {
   const characterCount = inputValue.length;
 
@@ -16,11 +8,9 @@ function countCharacters(inputValue) {
 }
 
 const textarea = document.getElementsByTagName('textarea')[0];
-const wordCounterElement = document.getElementById('word-counter');
 const characterCounterElement = document.getElementById('character-counter');
 
 textarea.addEventListener('input', () => {
-  wordCounterElement.innerHTML = countWords(textarea.value);
   characterCounterElement.innerHTML = countCharacters(textarea.value);
 
   // Redefine a altura do textarea, de acordo com o conteúdo

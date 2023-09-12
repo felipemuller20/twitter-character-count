@@ -5,16 +5,17 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+  <title>Twitter character counter</title>
   <link rel="stylesheet" href="/style.css" />
 </head>
 
 <body>
   <div id="app">
-    <div class="container">
+    <main class="main-container">
       <img src="/profile.jpg" class="profile" />
-      <section class="upper-content">Everyone <img src="/arrow-down.svg" class="arrow-down">
-        </span></section>
+      <section class="upper-content">
+        Everyone <img src="/arrow-down.svg" class="arrow-down">
+      </section>
       <textarea placeholder="What is happening?!"></textarea>
       <section class="lower-content"> <img src="/world.svg" /> Everyone can reply</section>
       <div class="post-options">
@@ -38,14 +39,10 @@
           <button>Post</button>
         </section>
       </div>
-    </div>
-    <div>
-      <label>Palavras:</label>
-      <span id="word-counter">0</span>
-    </div>
+    </main>
     <div>
       <label>Caracteres:</label>
-      <spa id="character-counter">0</span>
+      <span id="character-counter">0</span>
     </div>
     <script type="module" src="/main.js"></script>
 </body>

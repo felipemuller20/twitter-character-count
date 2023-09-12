@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #app {
@@ -12,9 +13,8 @@
   min-height: 100vh;
 }
 
-.container {
-  border-top: 1px solid rgba(128, 128, 128, 0.195);
-  border-bottom: 1px solid rgba(128, 128, 128, 0.195);
+.main-container {
+  border-block: 1px solid rgba(128, 128, 128, 0.195);
   padding: 10px;
   position: relative;
 }
@@ -30,7 +30,6 @@
 }
 
 .upper-content {
-  font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
   border-radius: 25px;
   border: 1px solid #cfd9de;
   padding-left: 12px;
@@ -51,7 +50,6 @@
   font-size: 12px;
   font-weight: 600;
   color: #1f9bf0;
-  font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
   margin-block: 10px;
   gap: 3px;
 }
@@ -64,11 +62,10 @@ textarea {
   resize: none;
   overflow-y: hidden;
   outline: none;
-  width: 500px;
+  width: 450px;
   height: auto;
   min-height: 25px;
   border: none;
-  font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
 }
 
@@ -110,7 +107,6 @@ button {
   border: none;
   padding: 10px 18px;
   font-weight: 600;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #1f9bf0;
   color: white;
 }
@@ -146,7 +142,6 @@ svg circle:nth-child(2) {
   top: 19.5px;
   left: 14.5px;
   width: 22px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 10px;
   color: #6a7883;
 }
