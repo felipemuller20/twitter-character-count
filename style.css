@@ -92,13 +92,13 @@ textarea::placeholder {
   width: 20px;
 }
 
-.counter-button {
+.counter-and-button {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.counter-button img {
+.counter-and-button img {
   width: 30px;
 }
 
@@ -130,7 +130,7 @@ svg circle {
 
 svg circle:nth-child(2) {
   stroke: #1f9bf0;
-  stroke-dasharray: calc(2 * 3.141592653589793 * 12);
+  stroke-dasharray: calc(2 * 3.141592653589793 * 12); /* 2πr */
   stroke-dashoffset: calc(2 * 3.141592653589793 * 12);
 }
 
