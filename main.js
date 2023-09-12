@@ -26,7 +26,7 @@ textarea.addEventListener('input', () => {
     innerCircle.style.stroke = '#f4212e';
     innerCircle.style.strokeDashoffset = 0;
     numberInsideCircle.innerHTML = `${(countCharacters(textarea.value) - maxCount) > 0 ? "-" : ""}${countCharacters(textarea.value) - maxCount}`;
-    if (countCharacters(textarea.value) - maxCount > 20) {
+    if (countCharacters(textarea.value) - maxCount > 9) {
       innerCircle.style.stroke = 'none';
       outerCircle.style.stroke = 'none';
     }

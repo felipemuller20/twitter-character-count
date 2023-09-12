@@ -1,3 +1,8 @@
+:root {
+  --pi: 3.141592653589793;
+  --rad: 12;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -130,8 +135,8 @@ svg circle {
 
 svg circle:nth-child(2) {
   stroke: #1f9bf0;
-  stroke-dasharray: calc(2 * 3.141592653589793 * 12); /* 2πr */
-  stroke-dashoffset: calc(2 * 3.141592653589793 * 12);
+  stroke-dasharray: calc(2 * var(--pi) * var(--rad)); /* 2πr */
+  stroke-dashoffset: calc(2 * var(--pi) * var(--rad));
 }
 
 #number-inside-circle {
