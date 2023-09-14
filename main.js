@@ -11,11 +11,18 @@ const textarea = document.getElementsByTagName('textarea')[0];
 const characterCounterElement = document.getElementById('character-counter');
 
 textarea.addEventListener('input', () => {
-  characterCounterElement.innerHTML = countCharacters(textarea.value);
+  // characterCounterElement.innerHTML = countCharacters(textarea.value);
+  const button = document.getElementById('post-button');
 
   // Redefine a altura do textarea, de acordo com o conteúdo
   textarea.style.height = 'auto'; // Define a altura para automática
   textarea.style.height = `${textarea.scrollHeight}px`; // Ajusta a altura com base no conteúdo
+
+  if (countCharacters(textarea.value) > maxCount || countCharacters(textarea.value) === 0) {
+    button.disabled = true;
+  } else {
+    button.disabled = false;
+  }
 
   const innerCircle = document.getElementById('inner');
   const outerCircle = document.getElementById('outer');

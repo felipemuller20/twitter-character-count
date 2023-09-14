@@ -114,6 +114,11 @@ button {
   font-weight: 600;
   background-color: #1f9bf0;
   color: white;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #7fb4e6;
 }
 
 svg {
